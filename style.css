@@ -1,0 +1,548 @@
+@font-face { 
+    font-family : 'font1' ; 
+    src : url(./font/Otterco.ttf) ;
+}
+
+@font-face { 
+    font-family : 'font2' ; 
+    src : url(./font/Otterco\ Display\ Medium.ttf) ;
+}
+
+@font-face { 
+    font-family : 'font3' ; 
+    src : url(./font/Otterco\ Display\ Semibold.ttf) ;
+}
+
+@font-face { 
+    font-family : 'font4' ; 
+    src : url(./font/Otterco\ Medium.ttf) ;
+}
+
+:root { 
+    --primary-backGround : #F8F8F8 ; 
+    --primary-foreGround : #F0EFEE ; 
+    --text-Color : #1C1C1C ; 
+    --button-White : #FCFDFF ; 
+    --button-Black : #242424 ; 
+}
+
+* { 
+    padding : 0 ; 
+    margin : 0 ; 
+    box-sizing : border-box ; 
+}
+
+html , body  { 
+    height : 100vh ; 
+    width : 100vw ;
+    background-color : var(--primary-foreGround) ; 
+    position : relative ; 
+    font-family : 'font1' ; 
+}
+
+.backdrop-1 {
+    height :  75% ; 
+    width : 100% ; 
+    background-color : var(--primary-backGround) ; 
+}
+
+
+.header { 
+    height : 100% ; 
+    width : 100% ;   
+}
+
+.header .top { 
+    height : 100% ; 
+    width : 100% ;  
+    background-color : var(--primary-foreGround) ; 
+    border-radius : 0 0 135px 135px ; 
+    overflow : hidden ; 
+    position : relative ; 
+}
+
+.header .top .lower {
+    height : 87% ;  
+} 
+
+.lower .content { 
+    width : 100% ; 
+    display : flex ; 
+    flex-direction : column ; 
+    align-items : center ; 
+    position : absolute ; 
+    top : 50% ; 
+    left : 50% ; 
+    transform : translate(-50% , -50%) ; 
+    text-align : center ; 
+    font-size : 2.2rem ;
+    font-family : "font1" ;
+    font-weight : 900 ; 
+    line-height : 65px ;  
+    gap : 1.2rem ; 
+    background : linear-gradient(95deg, black, rgba(0, 0, 0, 0.749), rgb(240, 239, 238)) ; 
+    -webkit-background-clip : text ; 
+    -webkit-text-fill-color : trasnparent ; 
+    background-clip : text ; 
+    color : transparent ; 
+}
+
+.lower .content img {
+    width : 7.5rem ; 
+    border-radius : 50% ; 
+    border : 4px solid white ; 
+    cursor : pointer ; 
+}
+
+.header .lower button { 
+    position : absolute ; 
+    left : 50% ; 
+    bottom : 10% ; 
+    transform : translate(-50% , -50%) ; 
+    transition : all .3s ease ; 
+}
+
+.primary-dark { 
+    padding : 1.5rem 3rem ; 
+    border : none ; 
+    background-color : var(--button-Black) ; 
+    color : var(--button-White) ; 
+    font-family : 'font3' ; 
+    font-size : .85rem ; 
+    cursor : pointer ; 
+    border-radius : 100px ; 
+    font-family : "font3" ; 
+}
+
+.header .lower button:hover { 
+    text-decoration : underline ; 
+    background-color : rgba(36, 36, 36, 0.900) ; 
+}
+
+
+.backdrop-2 { 
+    height : 25% ; 
+    width : 100% ;  
+    background-color : var(--primary-foreGround) ; 
+}
+
+
+.backdrop-2 .bottom { 
+    height : 100% ; 
+    width : 100vw ; 
+    background-color : var(--primary-backGround) ; 
+    border-radius : 0 0 100px 100px ; 
+    display : flex ; 
+    align-items : center ; 
+    white-space : nowrap ; 
+    overflow-x : hidden ; 
+    gap : 120px ; 
+    position : relative ; 
+}
+
+.bottom:before { 
+    background:  linear-gradient(to left, transparent , var(--primary-backGround)) ;
+    content : "" ; 
+    position : absolute ; 
+    top : 0 ; 
+    left : 0 ; 
+    width : 15% ; 
+    height : 100% ;
+    z-index : 2 ;  
+}
+
+.bottom:after { 
+    background:  linear-gradient(to right, transparent , var(--primary-backGround)) ;
+    content : "" ; 
+    position : absolute ; 
+    top : 0 ; 
+    right : 0 ; 
+    width : 15% ; 
+    height : 100% ;
+    z-index : 2 ;  
+}
+
+.backdrop-2 .bottom .logos-slider { 
+    width : 100% ; 
+    white-space : nowrap ; 
+    display : flex ; 
+    align-items : center ; 
+    gap : 120px ;  
+    animation : 50s slider infinite linear ; 
+    cursor : pointer ; 
+}
+
+
+.backdrop-2 .bottom .logos-slider img { 
+    height : 40px ; 
+}
+
+@keyframes slider { 
+    from {
+        transform : translateX(0) ; 
+    } to { 
+        transform : translateX(-100%) ; 
+    }
+}
+
+
+main { 
+    width : 100% ; 
+    height : 100% ; 
+    z-index : 2 ; 
+    position : relative ; 
+    overflow-x : hidden ; 
+}
+
+nav { 
+    height : 13% ; 
+    max-width : 90% ;
+    width : 100% ;  
+    margin : 0 auto ; 
+
+    display : flex ; 
+    flex-direction : column ; 
+    justify-content : flex-end ; 
+}
+
+.wrapper {
+    width : 100% ; 
+    display : flex ; 
+    justify-content : space-between ; 
+    align-items : center ; 
+}
+
+nav a { 
+    text-decoration : none ; 
+}
+
+nav .left { 
+    gap : 1rem ;
+    display : flex ;  
+    align-items : center ; 
+    font-size : .7rem ; 
+    font-weight : 500 ; 
+    font-family : 'font4' ;
+    font-weight : 100 ; 
+}
+
+nav .left p { 
+    cursor : pointer ; 
+}
+
+nav .right { 
+    display : flex ;
+    gap : 1rem ;  
+    font-size : .9rem ; 
+}
+
+.primary-light { 
+    padding : 1rem 3rem ; 
+    font-family : 'font2' ; 
+    border : none ; 
+    border-radius : 50px ; 
+    cursor : pointer ; 
+    background-color : var(--button-White) ; 
+    transition : all .3s ease ; 
+}
+
+.primary-light:hover { 
+    text-decoration : underline ; 
+    background-color : rgba(248, 248, 248, .75)
+}
+
+nav .right a { 
+    color : var(--button-black) ; 
+}
+
+nav .right a:hover { 
+    text-decoration : underline ; 
+}
+
+.skills { 
+    height : 70% ; 
+    width : 100% ; 
+    background-color : var(--primary-foreGround) ; 
+}
+
+.skills-wrap { 
+    height : 100% ; 
+    width : 60% ; 
+    margin : 0 auto ; 
+    position : relative ; 
+}
+
+.skills-wrap .main { 
+    height : 50% ;  
+    border-bottom : 1px solid #1c1c1c1a ; 
+    display : flex ; 
+    justify-content : center ; 
+    align-items : center ; 
+    position : relative ; 
+}
+
+.skills-wrap .card { 
+    position : absolute ; 
+    bottom : -10% ; 
+    rotate : -10deg ; 
+}
+
+.skills-wrap .card:hover {
+    text-decoration : none ; 
+    background-color : var(--button-White); 
+}
+
+
+.skills-wrap .main h1{ 
+    font-family : 'font3' ; 
+    font-size : 2.5rem ; 
+    text-align : center ; 
+    background : linear-gradient(90deg, black, #1c1c1c48) ; 
+    -webkit-background-clip : text ; 
+    -webkit-text-fill-color : trasnparent ; 
+    background-clip : text ; 
+    color : transparent ; 
+}
+
+
+
+.grid-container img { 
+    height : 3.5rem ; 
+}
+
+.skills-wrap .grid-container { 
+    width : 100% ; 
+    display : flex ; 
+    justify-content : space-between ; 
+    align-items : center ;
+    margin-top : 5% ; 
+}
+
+.grid-container .card-1 { 
+    width : 200px ; 
+    text-align : center ; 
+}
+
+.grid-container .card-1 h1 { 
+    font-weight : 400 ; 
+    font-size : 1.2rem ;
+}
+
+.grid-container .card-1 p { 
+    font-size : .8rem ; 
+}
+
+.talk-with-me {
+    height : 65% ; 
+    width : 100% ;
+    background-color : var(--primary-backGround) ; 
+    border-radius : 120px 120px 0 0 ; 
+    position : relative ; 
+
+    display : flex ; 
+    flex-direction : column ; 
+    justify-content : flex-end ; 
+}
+
+.talk-with-me .float { 
+    position : absolute ;
+    top : 40% ; 
+    left : 50% ; 
+    transform : translate(-50% , -50%) ;  
+}
+
+.float .upper { 
+    text-align : center ; 
+
+}
+
+.float .upper h1 { 
+    font-size : 3rem ;
+    font-family : 'font3' ; 
+    line-height : 40px ; 
+    margin : 30px 0 ; 
+}
+
+.float .upper .new { 
+    margin-right : 30px ; 
+    padding : 1rem 2rem ; 
+}
+
+.float .upper .border { 
+    border : 3px solid rgba(128, 128, 128, 0.258) ;
+    padding : 1rem 2rem ;  
+}
+
+.float .upper img { 
+    height : 7.5rem ;
+    width : 7.5rem ; 
+    background-color : var(--primary-foreGround);
+    border-radius : 50% ;  
+}
+
+.float .upper button { 
+    margin-top : 30px ; 
+}
+
+.talk-with-me footer { 
+    height : 7rem ; 
+    width : 90% ; 
+    margin : 0 auto ; 
+    border-top : .5px solid rgba(0, 0, 0, 0.221) ; 
+    display : flex ; 
+    align-items : center ; 
+    justify-content : space-between ; 
+}
+
+.talk-with-me footer h1 { 
+    font-family : 'font1' ; 
+    font-size : .85rem ; 
+    font-weight : 100 ; 
+}
+
+.talk-with-me footer .right { 
+    display : flex ;
+    gap : 1rem ;  
+    font-size : .9rem ;
+    color : var(--button-Black) ; 
+}
+
+.talk-with-me footer .right a { 
+    color : var(--button-Black) ;
+    text-decoration : none ;  
+}
+
+nav .small { 
+    display : none ; 
+}
+
+footer .small { 
+    display : none ; 
+}
+
+
+@media  only screen and (max-width : 870px) {
+
+    nav .left { 
+        gap : 10px ; 
+
+    }
+
+    nav .left p {
+        display : none ; 
+    }
+
+    nav .right { 
+        display : none ; 
+    }
+    nav .small {
+        font-size : 1.2rem ; 
+        display : flex ; 
+        align-items : center ;
+    }
+
+    nav .small a i{
+        padding : 5px ; 
+        background-color : var(--primary-backGround) ; 
+        color : black ; 
+        border-radius : 50% ; 
+    }
+
+    .primary-light { 
+        padding : 15px 30px; 
+    }
+
+    .header .lower .content img{ 
+        width : 4rem ; 
+    }
+
+    .header .lower .content h1 {  
+        min-height : 10vh ;  
+        font-size : 1.9rem ; 
+        width : 100% ; 
+        line-height : 30px ; 
+    }
+
+    .header .lower button { 
+        bottom : 17% ; 
+    }
+
+    .primary-dark { 
+        padding : 15px 30px ; 
+    }
+
+    .skills { 
+        height : 100% ; 
+    }
+
+    .skills .show {
+        background-color : black ; 
+        overflow : hidden ; 
+        width : 100% ; 
+    }
+
+    .skills .grid-container {  
+        flex-direction : column ; 
+         margin-top : 20% ; 
+    }
+
+    .skills-wrap .card { 
+        bottom : -6% ; 
+    }
+
+    .grid-container .card-1 img{ 
+        height : 3rem ; 
+    }
+
+    .grid-container .card-1  p {
+        display : none ; 
+    }
+
+    .grid-container .card-1 h1 {
+        font-size : 1rem ; 
+    }
+
+    .talk-with-me .float .upper img{
+        width : 6rem ; 
+        height : 6rem ;  
+    }
+
+   
+    
+
+    .float .upper .new {
+        padding : .5rem 1rem ; 
+        margin : 0 ; 
+    }
+
+    .float .upper .border {
+        padding : .5rem 1rem ; 
+    }
+
+    .float .upper h1 { 
+        font-size : 2rem ; 
+        line-height : 25px ;
+        margin : 10px 0 ;  
+    }
+
+    footer .right { 
+        background-color : red ; 
+        display : none !important; 
+    }
+    footer .small {
+        font-size : 1.2rem ; 
+        display : flex ; 
+        align-items : center ;
+    }
+
+    footer .small a { 
+        text-decoration : none ; 
+    }
+
+    footer .small a i{
+        padding : 5px ; 
+        background-color : var(--primary-backGround) ; 
+        color : black ; 
+        border-radius : 50% ; 
+    }
+}
