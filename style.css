@@ -114,6 +114,11 @@ html , body  {
     font-family : "font3" ; 
 }
 
+.primary-dark a { 
+    text-decoration : none ; 
+    color : var(--button-White) ; 
+}
+
 .header .lower button:hover { 
     text-decoration : underline ; 
     background-color : rgba(36, 36, 36, 0.900) ; 
